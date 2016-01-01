@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="KJ5-fw-GLF" customClass="HXDTurntableView">
+            <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="LuckyBaseBackground" translatesAutoresizingMaskIntoConstraints="NO" id="gE7-L8-mRP">
+                    <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="LuckyRotateWheel" translatesAutoresizingMaskIntoConstraints="NO" id="sIn-3Z-dVK">
+                    <rect key="frame" x="0.0" y="0.0" width="286" height="286"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sr5-dH-zZ0">
+                    <rect key="frame" x="103" y="102" width="81" height="81"/>
+                    <state key="normal" image="LuckyCenterButton"/>
+                    <connections>
+                        <action selector="pickNumberAction" destination="KJ5-fw-GLF" eventType="touchUpInside" id="aNE-Zd-XFk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gE7-L8-mRP" secondAttribute="trailing" id="1eu-aZ-dvl"/>
+                <constraint firstItem="gE7-L8-mRP" firstAttribute="top" secondItem="KJ5-fw-GLF" secondAttribute="top" id="1yK-Pp-lbw"/>
+                <constraint firstItem="sIn-3Z-dVK" firstAttribute="top" secondItem="KJ5-fw-GLF" secondAttribute="top" id="AXj-tr-c2q"/>
+                <constraint firstAttribute="bottom" secondItem="sIn-3Z-dVK" secondAttribute="bottom" id="Bng-CB-n1W"/>
+                <constraint firstAttribute="bottom" secondItem="gE7-L8-mRP" secondAttribute="bottom" id="Pgl-cL-RpJ"/>
+                <constraint firstItem="Sr5-dH-zZ0" firstAttribute="centerY" secondItem="KJ5-fw-GLF" secondAttribute="centerY" id="QST-KS-5Jg"/>
+                <constraint firstItem="gE7-L8-mRP" firstAttribute="leading" secondItem="KJ5-fw-GLF" secondAttribute="leading" id="dD7-cl-qKf"/>
+                <constraint firstItem="sIn-3Z-dVK" firstAttribute="leading" secondItem="KJ5-fw-GLF" secondAttribute="leading" id="gbv-FV-ug0"/>
+                <constraint firstAttribute="trailing" secondItem="sIn-3Z-dVK" secondAttribute="trailing" id="qLS-6d-wUr"/>
+                <constraint firstItem="Sr5-dH-zZ0" firstAttribute="centerX" secondItem="KJ5-fw-GLF" secondAttribute="centerX" id="wif-Dc-OY5"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="rotateWheelImage" destination="sIn-3Z-dVK" id="5w2-fw-l6M"/>
+            </connections>
+            <point key="canvasLocation" x="309" y="295"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LuckyBaseBackground" width="286" height="286"/>
+        <image name="LuckyCenterButton" width="81" height="81"/>
+        <image name="LuckyRotateWheel" width="286" height="286"/>
+    </resources>
+</document>
